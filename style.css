@@ -5,8 +5,14 @@ body {
 	/*background-color: #fff;*/
 	font-family: 'Roboto', sans-serif;
 	color: #333;
+    overflow-x: hidden !important;
+}
+.container {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
 }
 /*header part*/
+
 header {
 	overflow: hidden;
 	height: 71px;
@@ -17,17 +23,19 @@ figure {
 header img {
 	width: 302px;
 	height: 70px;
-   padding: 6px 10px 6px 10px;
-   float: left;
+    padding: 6px 10px 6px 10px;
+    float: left;
 }
 header nav {
-	width: 100%;
+	/*width: 100%;*/
 	float: left;
-	position: relative;
+    margin-left: 40%;
+    padding-top: 3%;
+	/*position: relative;
 	
-	bottom: 30px;
-	display: inline-block;
-	left: 60%;
+	bottom: 30px;*/
+	/*display: inline-block;
+	left: 60%;*/
 }
 nav a {
 	text-decoration: none;
@@ -45,7 +53,7 @@ section#site_blue {
 	/*background-color: #5d91ab;*/
 	background-image: url("Img/sectionimg.jpg");
 	background-repeat: no-repeat;
-	background-size: 1350px 452px;
+	background-size: 1349px 452px;
 	color: #fff;
     height: 452px;
     opacity: 0.9;
@@ -72,7 +80,7 @@ section#site_blue {
     color: #f0f0f0;
 }
 /*section2*/
-#site_seablue {
+#site_seablue,#image_container {
 	background-color:#35b2cc;
 	float: left;
 }
@@ -140,19 +148,19 @@ section#site_note img {
     height: 150px;
 
 }
-section#latest_work {
+section#latest_work,section#latest_news,section#robot {
 	background-color: #221e1e;
 	color: #fff;
 	overflow: hidden;
 }
-#latest_work h2,section#power_features h2 {
+#latest_work h2,section#power_features h2,section#latest_news h2,section#partners h2 {
 	font-size: 33px;
 	text-align: center;
 	padding-top: 6%;
 	font-weight: bold;
 	margin-bottom: 2%;
 }
-#latest_work hr.line {
+#latest_work hr.line,#partners hr.line {
 	width: 12%;
 	text-align: center;
 	border: none;
@@ -160,17 +168,17 @@ section#latest_work {
 	margin: 0 auto;
 
 }
-#latest_work hr.line:after {
+#latest_work hr.line:after,#partners hr.line:after {
 	content: "\2605";
     display: inline-block;
     position: relative;
     top: -0.8em;
     font-size: 0.8em;
-    padding: 0 0.25em;
+    /*padding: 0 0.25em;*/
     background: #2d2d2d;
     color: #4c908a;
 }
-#latest_work p,section#power_features p,section#amazing_features p{
+#latest_work p,section#power_features p,section#amazing_features p,section#latest_news p {
 	text-align: center;
     width: 73%;
     margin: 0 auto;
@@ -363,6 +371,7 @@ section#power_features aside .column3 img {
 }
 section#amazing_features {
        background-color: #efecec;
+       overflow: hidden;
 }
 section#amazing_features h2 {
     font-size: 33px;
@@ -398,7 +407,7 @@ section#amazing_features hr.line:after {
     float: left;
     margin-bottom: 2%;
 }
-#amazing_features article .left_column .left_content {
+#amazing_features article .left_column .left_content,#amazing_features article .right_column .right_content {
     overflow: hidden;
     margin-right: 3%;
     padding-left: 0.5%; 
@@ -482,15 +491,166 @@ section#amazing_features hr.line:after {
     width: 45%;
     float: left;
 }
+#amazing_features article .right_column .right_content {
+    overflow: hidden;
+}
 
 #amazing_features article .right_column img {
     float: left;
     margin-top: 8%;
 }
 #amazing_features article .right_column h2 {
-    text-align: center;
-    padding-top: 6%;
+    width: 70%;
+    float: left;
+    text-align: left;
+    padding-top: 7%;
     font-weight: bold;
     margin-bottom: 2%;
     font-size: 19px;
+    padding-left: 5%;
+}
+#amazing_features article .right_column .right_content p {
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+    float: left;
+    font-size: 0.83em;
+    padding-left: 5%;
+    padding-bottom: 3%;
+}
+/*section latest news part*/
+#latest_news hr.line {
+    width: 12%;
+    text-align: center;
+    border: none;
+    border-top: 2px solid #444;
+    margin: 0 auto;
+
+}
+#latest_news hr.line:after {
+    content: "\2605";
+    display: inline-block;
+    position: relative;
+    top: -0.8em;
+    font-size: 0.8em;
+    padding: 0 0.25em;
+    background: #2d2d2d;
+    color: #fff;
+}
+section#latest_news article {
+    width: 90%;
+    margin: 3% auto;
+    overflow: hidden;
+}
+section#latest_news article .blue_box {
+    width: 30%;
+    float: left;
+    background-color:   #3cbacc;
+    height: 300px;
+    border: 1px solid #444;
+    margin-left: 2%;
+}
+section#latest_news article .title_white {
+    width: 30%;
+    float: left;
+    background-color: #fff;
+    height: 280px;
+    border: 1px solid #fff;
+    margin-left: 2%;
+}
+section#latest_news article .title_white h3 {
+    color: #444;
+    padding-left: 7%;
+    padding-top: 4%;
+}
+/*SEction buttons group*/
+section#buttons_group {
+    background-image: url(Img/img21.jpg);
+    width: 1350px;
+    height: 600px;
+}
+section#buttons_group aside {
+    width: 500px;
+    margin: 0% auto;
+    text-align: center;
+}
+section#buttons_group aside input {
+    margin-top:2%;
+    border: 5px solid black;
+}
+/*section image container part*/
+section#image_container {
+    float: none;
+    overflow: hidden;
+}
+section#image_container .left_side_img {
+    text-align: end;
+}
+section#image_container .left_side_img img {
+    width: 692px;
+    height: 288px;
+}
+section#image_container article {
+    width: 93%;
+    margin: 2% auto;
+    overflow: hidden;
+}
+section#image_container .main_content_image {
+    width: 30.333%;
+    float: left;
+    padding-left: 2%;
+    margin-bottom: 12%;
+    margin-right: 3%;
+    margin-top: 2%;
+}
+section#image_container .main_content_image img {
+    height: 150px;
+    width: 150px;
+}
+/*section robot part*/
+section#robot .robo_img,section#robot .side_content {
+    width: 50%;
+    float: left;
+}
+section#robot .robo_img img {
+    width: 520px;
+    height: 652px;
+}
+section#robot .side_content {
+    margin-top: 6%;
+    line-height: 36px;
+}
+section#robot .side_content h1 {
+    font-size: 2em;
+    margin-right: 13%;
+    font-weight: 600;
+}
+section#robot .side_content p {
+        margin-top: 2%;
+        margin-right: 14%;
+}
+section#robot .side_content p.para1:before {
+    /*font-family: FontAwesome;*/
+    content: "\2714";
+    color: #16d5f0;
+    margin-right: 1%;
+}
+section#robot .side_content input {
+    padding: 2% 3%;
+    background-color: #15a3b7;
+    border: none;
+    text-transform: uppercase;
+    margin-top: 2%;
+}
+/*section partner part */
+#partners hr.line:after {
+    background-color: #fff;
+}
+#partners p {
+    text-align: center;
+    width: 73%;
+    margin: 0 auto;
+    color: #1f1d1d;
+    line-height: 21px;
+    padding-top: 2%;
 }
